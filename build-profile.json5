@@ -1,0 +1,87 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "storePassword": "00000020EF8D7779F699679B7367BEA57DCA0BFF6B6CACA31F034DB26A9F3EC54A321EEB4371DD053D31EB69E1363100",
+          "certpath": "/storage/Users/currentUser/Documents/ohos/config/default_Helloworld9bV4vfJtylTznjE8I3NcjYvg8XC1YNtQB-u7rCJLo1Y.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "00000020EF8D7779F699679B7367BEA57DCA0BFF6B6CACA31F034DB26A9F3EC54A321EEB4371DD053D31EB69E1363100",
+          "profile": "/storage/Users/currentUser/Documents/ohos/config/default_Helloworld9bV4vfJtylTznjE8I3NcjYvg8XC1YNtQB-u7rCJLo1Y.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/storage/Users/currentUser/Documents/ohos/config/default_Helloworld9bV4vfJtylTznjE8I3NcjYvg8XC1YNtQB-u7rCJLo1Y.p12"
+        },
+        "type": "HarmonyOS"
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.1.0(23)",
+        "compatibleSdkVersion": "6.1.0(23)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }, {
+        "name": "HAR",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.1.0(23)",
+        "compatibleSdkVersion": "6.1.0(23)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HAR",
+      "srcPath": "./HAR",
+         "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        },
+        {
+          "name": "demo1",
+          "applyToProducts": [
+            "default",
+            "HAR"
+          ]
+        }
+      ]
+    }
+  ]
+}
